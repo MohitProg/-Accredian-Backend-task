@@ -1,6 +1,6 @@
 import { createTransport } from "nodemailer";
 
-const transporter = createTransport({
+const transporter =  createTransport({
   host: "smtp.gmail.com",
   port:587,
   secure:false,
@@ -24,7 +24,7 @@ export const SendReferralEmail = async (
 ) => {
   console.log(referralEmail);
   try {
-    const info = transporter.sendMail({
+    const info = await transporter.sendMail({
       from: "mohit.sharma327043@gmail.com",
       to: referralEmail,
       subject: `${referralName} send a Course Refferal to you please check it  `,
