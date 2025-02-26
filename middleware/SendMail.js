@@ -2,10 +2,15 @@ import { createTransport } from "nodemailer";
 
 const transporter = createTransport({
   host: "smtp.gmail.com",
+  port:587,
   auth: {
     user: "mohit.sharma327043@gmail.com",
     pass: "begiwskrdruoawck",
   },
+
+  tls: {
+    rejectUnauthorized: false // Prevents SSL issues
+  }
 });
 
 export const SendReferralEmail = async (
