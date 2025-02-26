@@ -6,9 +6,10 @@
   "author": "",
   "type": "module",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+ "scripts": {
+  "build": "npx prisma generate && npx prisma db push"
+}
+,
   "dependencies": {
     "@prisma/client": "^6.4.1",
     "cors": "^2.8.5",
