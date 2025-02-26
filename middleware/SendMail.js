@@ -3,6 +3,7 @@ import { createTransport } from "nodemailer";
 const transporter = createTransport({
   host: "smtp.gmail.com",
   port:587,
+  secure:false,
   auth: {
     user: "mohit.sharma327043@gmail.com",
     pass: "begiwskrdruoawck",
