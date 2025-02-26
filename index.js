@@ -3,7 +3,9 @@ import cors from "cors"
 import referralRoute from "./routes/referralRoute.js"
 const app=express();
 
+let PORT=process.env.PORT||8000
 // middle ware 
+
 app.use(express.json());
 app.use(cors());
 
@@ -13,6 +15,6 @@ app.get("/",(req,res)=>{
     return res.send("server is running ")
 })
 
-app.listen(8000,()=>{
-    console.log("server is started")
+app.listen(PORT,()=>{
+    console.log(`server is started at PORT ${PORT}`)
 })
